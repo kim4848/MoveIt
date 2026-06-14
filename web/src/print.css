@@ -1,0 +1,148 @@
+@page {
+  size: A4 landscape;
+  margin: 10mm;
+}
+
+.printSheet {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #000;
+  max-width: 277mm;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.printControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.printHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.printTitle {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.printRule {
+  font-size: 12px;
+  color: #333;
+  margin: 4px 0 10px;
+}
+
+.printTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.printTable th,
+.printTable td {
+  border: 1px solid #444;
+  padding: 6px 4px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.printTable th {
+  font-size: 12px;
+}
+
+.nameCell {
+  text-align: left;
+  width: 18%;
+  font-weight: 700;
+}
+
+.nameSub {
+  font-weight: 400;
+  font-size: 10px;
+  color: #555;
+}
+
+.pCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.pCircle.filled {
+  border-color: #000;
+}
+
+.pCheck {
+  color: #fff;
+  font-weight: 900;
+}
+
+.pStar {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.pActivity {
+  font-size: 9px;
+  color: #333;
+  margin-top: 2px;
+  min-height: 12px;
+  border-bottom: 1px dotted #aaa;
+}
+
+.bonusGrid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+  font-size: 12px;
+}
+
+.bonusItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #bbb;
+  padding-bottom: 2px;
+}
+
+.legend {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #333;
+  display: flex;
+  gap: 16px;
+}
+
+.printActivities {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: #333;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .printSheet {
+    padding: 0;
+  }
+}

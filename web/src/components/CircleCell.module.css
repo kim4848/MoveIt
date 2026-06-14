@@ -1,0 +1,72 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 2px;
+}
+
+.circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid var(--cell-color, var(--mantine-color-gray-4));
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+  color: #fff;
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.circle:focus-visible {
+  outline: 3px solid var(--mantine-color-blue-5);
+  outline-offset: 2px;
+}
+
+.filled {
+  background: var(--cell-color, var(--mantine-color-gray-6));
+}
+
+.circle:active {
+  transform: scale(0.9);
+}
+
+.star {
+  position: absolute;
+  transform: translate(16px, -16px);
+  color: var(--mantine-color-yellow-6);
+}
+
+.activity {
+  font-size: 10px;
+  line-height: 1.1;
+  max-width: 52px;
+  text-align: center;
+  color: var(--mantine-color-dimmed);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dots {
+  opacity: 0.45;
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 38px;
+    height: 38px;
+    border-width: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    transition: none;
+  }
+  .circle:active {
+    transform: none;
+  }
+}

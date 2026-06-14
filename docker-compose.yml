@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: moveit
+    ports:
+      - "3000:3000"
+    volumes:
+      - movemore-data:/data
+    restart: unless-stopped
+
+volumes:
+  movemore-data:
