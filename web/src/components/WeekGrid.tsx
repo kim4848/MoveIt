@@ -45,6 +45,11 @@ export function WeekGrid({ weekKey, members, week }: WeekGridProps) {
                   <span className={classes.swatch} style={{ background: m.color }} />
                   {m.name}
                 </span>
+                {m.dailyTargetMinutes > 0 && (
+                  <Text size="xs" c="dimmed">
+                    {m.dailyTargetMinutes} min/dag
+                  </Text>
+                )}
                 <Text size="xs" className={reached ? classes.reached : undefined} c={reached ? undefined : 'dimmed'}>
                   {ach?.completed ?? 0}
                   {ach?.target != null ? ` / ${ach.target}` : ''}{' '}
